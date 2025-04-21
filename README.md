@@ -22,6 +22,9 @@ This is a smart, BMI-based diet recommendation system that helps users get perso
 ## 📁 How to Run Locally
 1. Clone this repo
 2. Run `npm install`
+     npm start
+      Open http://localhost:3000 to view it in your browser.
+      The page will reload when you make changes.
 3. Configure `.env` file with DB details
 4. Run `node server.js`
 
