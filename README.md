@@ -29,6 +29,9 @@ This is a smart, BMI-based diet recommendation system that helps users get perso
 ## 📸 Screenshots
 ![image](https://github.com/user-attachments/assets/b87b3d01-980d-4f91-b2d2-026c6691eb26)
 
+![image](https://github.com/user-attachments/assets/a1213e76-bede-4468-ad5b-87ca1b9cfefd)
+
+![image](https://github.com/user-attachments/assets/3f4ab9f8-af49-4f48-ad9e-d346d1716432)
 
 
 ## 👤 Developed by
