@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Resetting default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #1E1E1E;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Background overlay styles */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        url('./assets/patrick-fore-hoxqcGUheeo-unsplash.jpg') no-repeat center center / cover,
+        linear-gradient(to bottom, #000000, #252525);
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(4px);
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(40, 40, 40, 0.824);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Main container styles */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Authentication container styles */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 40px);
+}
+
+/* Authentication box styles */
+.auth-box {
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Button styles */
+.auth-button {
+    margin-top: 15px;
+    background-color: white;
+    color: #1E3A8A;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #338a3e; /* Hover effect color */
+    color: white;
+}
+
+/* Profile-specific button styles - Override general button styles */
+.profile-container .auth-button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #338a3e; /* Updated green color */
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.profile-container .auth-button:hover {
+    background-color: #2a7733; /* Darker green on hover for button */
+}
+
+/* Text field styles */
+.MuiFormControl-root,
+.MuiInputBase-root,
+.MuiInputLabel-root,
+.MuiSelect-root {
+    color: white !important; /* Ensure text is white */
+}
+
+/* Input field styles */
+.MuiOutlinedInput-root {
+    background-color: transparent !important;
+    border-radius: 5px !important;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: white !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #338a3e !important; /* Focused/Hover border color */
+}
+
+.MuiInputBase-input {
+    color: white !important;
+}
+
+/* Label styles */
+.MuiInputLabel-root {
+    color: white !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+    color: #338a3e !important; /* Focused label color */
+}
+
+/* Switch link styles (Login/Register links) */
+.switch-link {
+    margin-top: 10px;
+    color: #338a3e; /* Updated link color */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Recommendation section styles */
+.recommendation-section {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.recommendation-item {
+    margin-bottom: 20px;
+}
+
+/* Grid adjustments */
+.MuiGrid-root {
+    padding: 10px;
+}
+
+/* Profile container styles */
+.profile-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    color: white;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile info styles */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.profile-info-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-info-item:last-child {
+    border-bottom: none;
+}
+
+.profile-info-item strong {
+    color: #338a3e; /* Updated green color */
+    font-weight: 500;
+}
+
+/* Input styles for profile */
+.profile-info-item input[type="text"] {
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.profile-info-item input[type="text"]:focus {
+    outline: none;
+    border-color: #338a3e; /* Focus border color */
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 15px;
+}
+.main-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Transparent box with white border */
+.content-box {
+    background: transparent !important; /* Make background transparent */
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid white; /* White border */
+    box-shadow: none; /* Remove any existing box shadow */
+    color: white; /* Text color */
+}
+
+/* Input field styling */
+.custom-input .MuiOutlinedInput-root {
+    color: white !important;
+    background-color: transparent !important; /* Transparent input */
+    border-radius: 5px !important;
+}
+
+.custom-input .MuiOutlinedInput-notchedOutline {
+    border-color: white !important; /* White border for input */
+}
+
+.custom-input .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline,
+.custom-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #338a3e !important; /* Green border on focus/hover */
+}
+
+/* Input label styling */
+.custom-input .MuiInputLabel-root {
+    color: white !important;
+}
+
+.custom-input .MuiInputLabel-root.Mui-focused {
+    color: #338a3e !important;
+}
+
+/* Food list styling */
+.food-list-item {
+    background-color: transparent !important; /* Transparent background */
+    color: white !important; /* White text */
+    border: 1px solid white; /* White border */
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.food-list-item:hover {
+    background-color: #338a3e !important; /* Green background on hover */
+}
